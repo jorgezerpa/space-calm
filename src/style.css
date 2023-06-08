@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.app {
+  overflow-x: clip;
+}
+
+
+/* ------------------------ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+}
+
+.webGLContainer {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.hero__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  font-size: 2rem;
+}
+.hero__content h2 {
+  font-weight: 300;
+  font-style: italic;
+}
+.hero__content h2:nth-child(1) {
+  position: absolute;
+  right: 50%;
+  top: calc(50% - 7rem);
+}
+.hero__content h2:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 4rem);
+}
+.hero__scrollButton {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1rem;
+  font-style: italic;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, 0);
+}
+
+@media screen and (max-width:500px) {
+  .hero__content h2:nth-child(1) {
+    font-size:2rem;
+    right: auto;
+    left: 10%;
+    top: calc(50% - 9rem);
+  }
+  .hero__content h2:nth-child(2) {
+    font-size:2rem;
+    left: auto;
+    right: 10%;
+    top: calc(50% + 6rem);
+  }
+}
+
+/* --------------------------- */
+
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.section1Container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section1Container p{
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.webGLContainer2 {
+  width: 100%;
+  height: 100vh;
+}
+
+
+/* --------------------------- */
+
+.section2 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+.webGLContainer3 {
+  width: 50vw;
+  height: 100vh;
+}
+.section2__content{
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.section2__content p{
+  max-width: 400px;
+  width: 100%;
+  padding: 10px;
+}
+
+@media screen and (max-width:600px) {
+  .section2 {
+    flex-direction: column-reverse;
+  }
+  .section2__content{
+    min-height: 50vh;
+    width: 100%;
+  }
+  .webGLContainer3 {
+    width: 100%;
+    height: 90vh;
+  }
+}
